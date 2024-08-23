@@ -35,6 +35,10 @@ func _update() -> void:
 		var arr := []
 		arr.resize(width)
 		arr.fill(true)
+		if y < len(old_values):
+			for x in width:
+				if x < len(old_values[y]):
+					arr[x] = old_values[y][x]
 		values.append(arr)
 
 

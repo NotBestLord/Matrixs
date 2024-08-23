@@ -8,9 +8,9 @@ var property_controls : Array[SpinBox] = []
 var property_controls_parents : Array[Control] = []
 
 var is_init := false
-var current_size := 0
-var current_index := 0
-var current_value := 0.
+var current_size : int = 0
+var current_index : int = -1
+var current_value : float = 0.0
 
 var updating := false
 
@@ -34,6 +34,9 @@ func _update_property():
 		is_init = false
 		return
 	
+	if current_index == -1:
+		return
+	
 	if property_controls.is_empty() or current_index >= len(property_controls):
 		return
 	
@@ -49,6 +52,7 @@ func _update_property():
 
 
 func initialize():
+	current_index = -1
 	for box in property_controls_parents:
 		box.queue_free()
 	property_controls.clear()
@@ -81,7 +85,7 @@ func initialize():
 
 
 func _on_value_changed(index : int):
-	if (updating):
+	if updating:
 		return
 
 	current_index = index

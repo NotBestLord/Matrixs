@@ -5,8 +5,8 @@ var top_prop := GridContainer.new()
 var property_controls : Array[CheckBox] = []
 
 var is_init := false
-var current_size := 0
-var current_index := 0
+var current_size : int = 0
+var current_index : int = -1
 var current_value := false
 
 var updating := false
@@ -31,6 +31,9 @@ func _update_property():
 		is_init = false
 		return
 	
+	if current_index == -1:
+		return
+	
 	if property_controls.is_empty() or current_index >= len(property_controls):
 		return
 	
@@ -46,6 +49,7 @@ func _update_property():
 
 
 func initialize():
+	current_index = -1
 	for box in property_controls:
 		box.queue_free()
 	property_controls.clear()
@@ -64,13 +68,13 @@ func initialize():
 		property_controls.append(box)
 		
 		var pos := index_to_pos(index)
-		box.button_pressed = get_edited_object().values[pos.x][pos.y]
+		box.button_pressed = get_edited_object().values[pos.y][pos.x]
 
 
 func _on_button_pressed(index : int):
-	if (updating):
+	if updating:
 		return
-
+	
 	current_index = index
 	var pos := index_to_pos(index)
 	current_value = get_edited_object().values[pos.y][pos.x]
