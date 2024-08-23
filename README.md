@@ -11,6 +11,9 @@ Add editable Matrixes (2D Arrays) of several types:
 <br>And edit it in the inspector.
 <img src="https://github.com/NotBestLord/Matrixs/blob/master/screenshots/bool_matrix.png?raw=true"/>
 Edit its size and values easily!
+<br><br>
+Matrixes values are accessed through
+`matrix.values[y][x]`
 
 ## Resource Matrix
 The MatrixResource has a special field "Resource Types".<br>
