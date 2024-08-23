@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MatrixBool" load_steps=2 format=3 uid="uid://d4ki77qu40f8w"]
+
+[ext_resource type="Script" path="res://addons/matrixs/bool/matrix_bool.gd" id="1_p2qoa"]
+
+[resource]
+script = ExtResource("1_p2qoa")
+width = 3
+height = 3
+values = [[true, true, true], [true, true, true], [true, true, true]]

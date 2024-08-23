@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MatrixInt" load_steps=2 format=3 uid="uid://op752v515dxl"]
+
+[ext_resource type="Script" path="res://addons/matrixs/int/matrix_int.gd" id="1_41q0f"]
+
+[resource]
+script = ExtResource("1_41q0f")
+width = 2
+height = 2
+values = [[2, 99], [4, -12]]

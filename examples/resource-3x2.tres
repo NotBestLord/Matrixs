@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MatrixResource" load_steps=5 format=3 uid="uid://6lwokv1wt757"]
+
+[ext_resource type="Script" path="res://addons/matrixs/resource/matrix_resource.gd" id="1_201jj"]
+[ext_resource type="Resource" uid="uid://op752v515dxl" path="res://examples/int-2x2.tres" id="2_lysie"]
+[ext_resource type="Resource" uid="uid://5dgnivr6y1xb" path="res://examples/float-2x4.tres" id="2_yxs3o"]
+[ext_resource type="Resource" uid="uid://d4ki77qu40f8w" path="res://examples/bool-3x3.tres" id="4_r2wxl"]
+
+[resource]
+script = ExtResource("1_201jj")
+width = 3
+height = 2
+resource_types = "MatrixInt,
+MatrixFloat,
+MatrixBool"
+values = [[ExtResource("2_yxs3o"), ExtResource("2_lysie"), ExtResource("4_r2wxl")], [ExtResource("2_yxs3o"), ExtResource("2_lysie"), ExtResource("4_r2wxl")]]
