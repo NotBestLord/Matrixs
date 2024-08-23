@@ -1,4 +1,5 @@
 @tool
+@icon("res://addons/matrixs/icons/matrix_int.svg")
 class_name MatrixInt
 extends Resource
 

@@ -1,4 +1,5 @@
 @tool
+@icon("res://addons/matrixs/icons/matrix_bool.svg")
 class_name MatrixBool
 extends Resource
 

@@ -1,4 +1,5 @@
 @tool
+@icon("res://addons/matrixs/icons/matrix_resource.svg")
 class_name MatrixResource
 extends Resource
 ## A matrix of Resource type values, whose type is determined by resource_types

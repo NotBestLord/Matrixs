@@ -1,4 +1,5 @@
 @tool
+@icon("res://addons/matrixs/icons/matrix_float.svg")
 class_name MatrixFloat
 extends Resource
 
