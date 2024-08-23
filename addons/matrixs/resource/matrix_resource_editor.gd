@@ -8,6 +8,7 @@ var is_init := false
 var current_size : int = 0
 var current_index : int = -1
 var current_value = null
+var current_types := ""
 
 var updating := false
 
@@ -19,9 +20,12 @@ func _init() -> void:
 
 
 func _process(_delta: float) -> void:
-	if get_edited_object() != null and current_size != get_edited_object().size and not updating:
+	if (get_edited_object() != null 
+			and (current_size != get_edited_object().size or current_types != get_edited_object().resource_types) 
+			and not updating):
 		updating = true
 		current_size = get_edited_object().size
+		current_types = get_edited_object().resource_types
 		initialize()
 		updating = false
 

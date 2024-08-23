@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MatrixResource" load_steps=4 format=3 uid="uid://8pdimpcyqptl"]
+
+[ext_resource type="Script" path="res://addons/matrixs/resource/matrix_resource.gd" id="1_no5im"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qbmo7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0gmbd"]
+
+[resource]
+script = ExtResource("1_no5im")
+width = 2
+height = 1
+resource_types = "Shape3D"
+values = [[SubResource("SphereShape3D_qbmo7"), SubResource("BoxShape3D_0gmbd")]]
